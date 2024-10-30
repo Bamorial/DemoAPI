@@ -42,20 +42,9 @@ export class PortfoliosController {
     updatePortfolio(@Body() params?:any) 
     {
         this.portfolios[this.portfolios.indexOf(this.portfolios.filter(el=>{
-            if(el.id==params.id)
+            if(el.title==params.title)
                 return el
-        })[0])]={id:params.id, title:params.title, description: params.description, image: params.image, isVisible: params.isVisible}
+        })[0])]={ title:params.title, description: params.description, image: params.image, isVisible: params.isVisible}
         return this.portfolios
-    }
-    @Post('upload')
-    @UseInterceptors(FileInterceptor('file'))
-    async addNewImage(@UploadedFile() file: File) 
-    {
-        this.image=file
-        return file
-    }
-    @Get('upload')
-    getImg(){
-        return this.image
     }
 }
