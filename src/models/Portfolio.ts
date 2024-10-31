@@ -1,7 +1,8 @@
 export class Portfolio {
   title: string;
   description: string;
+  shortDescription: string;
   isVisible: boolean;
   link?: string;
-  image?: any;
+  image?: Express.Multer.File
 }
