@@ -3,6 +3,6 @@ export class Portfolio {
   description: string;
   shortDescription: string;
   isVisible: boolean;
-  link?: string;
-  image?: Express.Multer.File
+  link: string;
+  image: Express.Multer.File;
 }
