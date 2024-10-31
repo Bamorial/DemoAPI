@@ -53,6 +53,7 @@ export class PortfoliosController {
                 description: params.description, 
                 shortDescription: params.shortDescription, 
                 image: image, 
+                link: params.link,
                 isVisible: params.isVisible 
             };
         }
